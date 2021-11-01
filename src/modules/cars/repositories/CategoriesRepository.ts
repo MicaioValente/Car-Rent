@@ -4,7 +4,9 @@ import { ICategoriesRepository, ICreateCategoryDTO } from './ICategoriesReposito
 class CategoriesRepository implements ICategoriesRepository {
     private categories: Category[] = []
 
-    constructor() {
+    private static INSTANCE: CategoriesRepository
+
+    private constructor() {
         this.categories = []
     }
 
