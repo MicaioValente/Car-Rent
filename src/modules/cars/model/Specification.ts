@@ -15,3 +15,8 @@ class Specification {
 
 
 export { Specification }
+
+
+function name({ assd, asda }) {
+
+}

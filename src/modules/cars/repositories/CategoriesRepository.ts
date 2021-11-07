@@ -10,6 +10,13 @@ class CategoriesRepository implements ICategoriesRepository {
         this.categories = []
     }
 
+    private static getInstance(): CategoriesRepository {
+        if (!CategoriesRepository.INSTANCE) {
+            CategoriesRepository.INSTANCE = new CategoriesRepository
+        }
+        return CategoriesRepository.INSTANCE
+    }
+
     create({ name, description }: ICreateCategoryDTO): void {
         const category = new Category()
 
