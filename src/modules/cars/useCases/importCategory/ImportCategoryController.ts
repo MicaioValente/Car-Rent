@@ -1,8 +1,9 @@
+import { ImportCategoryUseCase } from "./importCategoryUseCase"
 
 
 class ImportCategoryController {
-
-    handle(request: Request, response: Response) {
+    constructor(private importCategpryUseCase: ImportCategoryUseCase) { }
+    handle(request: Request, response: Response): Response {
         const { file } = request
         console.log(file)
         return response.send()
